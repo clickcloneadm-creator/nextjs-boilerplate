@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segurança | Verificação</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .spinner { border-top-color: #3498db; animation: spin 1s linear infinite; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        body { -webkit-user-select: none; user-select: none; }
+    </style>
+    <script>
+        // SCRIPT ANTICLONE E TRANSPLANTE
+        const urlParams = new URLSearchParams(window.location.search);
+        const linkDestino = urlParams.get('dest') || "https://clickcloneai.com";
+
+        function validarHumano() {
+            const checkbox = document.getElementById('captcha');
+            if(checkbox.checked) {
+                checkbox.disabled = true;
+                document.getElementById('loading').classList.remove('hidden');
+                setTimeout(() => { window.location.href = linkDestino; }, 2000);
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#f9f9f9] flex items-center justify-center min-h-screen">
+    <div class="max-w-md w-full p-6 bg-white shadow-md rounded-lg border border-gray-200">
+        <h2 class="text-xl font-semibold text-center text-gray-800 mb-2">Verificação Necessária</h2>
+        <p class="text-sm text-center text-gray-500 mb-8">Confirme que você é um humano para acessar.</p>
+        <div class="bg-[#f9f9f9] border border-gray-300 p-4 rounded flex items-center justify-between mb-6">
+            <div class="flex items-center">
+                <input type="checkbox" id="captcha" onclick="validarHumano()" class="h-6 w-6 cursor-pointer">
+                <label for="captcha" class="ml-3 text-sm font-medium text-gray-700 cursor-pointer">Eu não sou um robô</label>
+            </div>
+            <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" class="h-8 w-8">
+        </div>
+        <div id="loading" class="hidden text-center">
+            <div class="spinner border-4 border-gray-200 h-8 w-8 rounded-full mx-auto mb-2"></div>
+            <p class="text-xs text-gray-500">Redirecionando de forma segura...</p>
+        </div>
+    </div>
+</body>
+</html>

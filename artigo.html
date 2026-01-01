@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saúde e Bem-Estar | Notícias</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { -webkit-user-select: none; user-select: none; }
+    </style>
+    <script>
+        // SCRIPT DE TRANSPLANTE CLICKCLONE
+        const urlParams = new URLSearchParams(window.location.search);
+        const linkDestino = urlParams.get('dest') || "https://clickcloneai.com";
+
+        function irParaOferta() {
+            window.location.href = linkDestino;
+        }
+    </script>
+</head>
+<body class="bg-gray-100 font-serif">
+    <nav class="bg-white border-b-4 border-blue-600 p-4">
+        <div class="container mx-auto max-w-2xl flex justify-between items-center">
+            <span class="font-black text-2xl italic tracking-tighter">PORTAL<span class="text-blue-600">SAÚDE</span></span>
+            <span class="text-[10px] bg-red-600 text-white px-2 py-1 font-bold rounded">EXCLUSIVO</span>
+        </div>
+    </nav>
+
+    <main class="container mx-auto max-w-2xl bg-white min-h-screen p-6 shadow-lg">
+        <p class="text-blue-600 font-bold text-xs uppercase mb-2">Descoberta • Atualizado Hoje</p>
+        <h1 class="text-3xl font-bold leading-tight mb-6 text-gray-900">
+            Nova descoberta natural vira febre e ajuda milhares de pessoas a recuperarem o bem-estar em 2025
+        </h1>
+
+        <div class="bg-gray-200 aspect-video rounded-lg mb-8 flex items-center justify-center text-gray-400 border-2 border-dashed">
+            [Imagem de Autoridade/Científica]
+        </div>
+
+        <article class="space-y-6 text-lg text-gray-700 leading-relaxed">
+            <p>Especialistas estão surpresos com os resultados de um novo método que foca no equilíbrio celular e energia constante.</p>
+            <p>O composto, que antes era restrito a um pequeno grupo, foi finalmente liberado para o público geral no Brasil através do portal oficial.</p>
+            
+            <div class="py-10 text-center">
+                <button onclick="irParaOferta()" class="w-full bg-green-600 text-white font-black py-5 rounded-lg shadow-xl text-xl animate-bounce">
+                    CONTINUAR LENDO A MATÉRIA ➔
+                </button>
+            </div>
+        </article>
+    </main>
+
+    <footer class="p-10 text-center text-gray-400 text-[10px]">
+        <p>© 2025 clickcloneai.com | Contato: clickcloneadm@gmail.com</p>
+    </footer>
+</body>
+</html>

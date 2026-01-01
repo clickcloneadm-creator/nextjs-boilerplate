@@ -1,0 +1,98 @@
+[13:42, 30/12/2025] Luiz Fernando: <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel | ClickClone AI</title>
+    <style>
+        :root { --bg: #0a0a0a; --card: #161616; --primary: #0070f3; --text: #eaeaea; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); margin: 0; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+        .sidebar { width: 100%; padding: 20px; border-bottom: 1px solid #333; display: flex; justify-content: space-between; align-items: center; box-sizing: border-box; }
+        .main-container { max-width: 800px; width: 90%; margin-top: 50px; text-align: center; }
+        .tool-box { background…
+[14:06, 30/12/2025] Luiz Fernando: index.html
+[15:07, 30/12/2025] Luiz Fernando: Novo Site
+[15:08, 30/12/2025] Luiz Fernando: Index.html
+[15:08, 30/12/2025] Luiz Fernando: <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClickClone - Global Safe Infrastructure</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .template-card { cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 3px solid transparent; }
+        .template-card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
+        .selected-card { border-color: #2563eb !important; background-color: #eff6ff; ring: 4px; ring-color: #bfdbfe; }
+        /* Bloqueio de seleção de texto para proteger o design */
+        body { -webkit-user-select: none; user-select: none; }
+        /* Permite seleção apenas nos campos de entrada */
+        input { -webkit-user-select: text; user-select: text; }
+    </style>
+
+    <script>
+        /* SCRIPT DE PROTEÇÃO E BLOQUEIO INTELIGENTE */
+        document.addEventListener('contextmenu', function(e) {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return true;
+            e.preventDefault();
+        });
+
+        document.onkeydown = function(e) {
+            if (e.keyCode == 123 || (e.ctrlKey && e.keyCode == 85)) return false;
+            const isInput = document.activeElement.tagName === 'INPUT';
+            if (!isInput && (e.ctrlKey && (e.keyCode == 67 || e.keyCode == 86))) return false;
+        };
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+
+    <nav class="bg-white/80 backdrop-blur-md border-b sticky top-0 z-50 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-black tracking-tighter text-blue-600">CLICK<span class="text-slate-800">CLONE</span></h1>
+            <div class="flex items-center gap-4">
+                <span class="text-[10px] bg-green-100 text-green-700 font-bold px-2 py-1 rounded">INFRAESTRUTURA ATIVA</span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="container mx-auto px-6 py-12 text-center">
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-4 leading-tight">
+            Sua Oferta <span class="text-blue-600">Blindada e Hospedada</span>
+        </h2>
+        <p class="text-slate-500 max-w-2xl mx-auto">Insira seu link de afiliado e escolha um modelo de pré-venda de alta conversão para o <strong>clickcloneai.com</strong>.</p>
+    </header>
+
+    <main class="container mx-auto px-6 pb-24">
+        <div class="max-w-5xl mx-auto">
+            
+            <div class="mb-12">
+                <h3 class="text-xl font-bold mb-6 flex items-center">
+                    <span class="bg-blue-600 text-white w-7 h-7 rounded-full flex items-center justify-center mr-3 text-sm">1</span>
+                    Selecione o Modelo de Pre-Sell
+                </h3>
+                
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                    <div onclick="selectT(this, 'pergunta.html')" class="template-card bg-white p-3 rounded-2xl shadow-sm border-2">
+                        <div class="aspect-square bg-blue-50 rounded-xl mb-3 flex items-center justify-center text-4xl">🗳️</div>
+                        <p class="text-[10px] font-black text-center uppercase tracking-wider">Quiz Premium</p>
+                    </div>
+                    <div onclick="selectT(this, 'artigo.html')" class="template-card bg-white p-3 rounded-2xl shadow-sm border-2">
+                        <div class="aspect-square bg-emerald-50 rounded-xl mb-3 flex items-center justify-center text-4xl">📰</div>
+                        <p class="text-[10px] font-black text-center uppercase tracking-wider">Advertorial</p>
+                    </div>
+                    <div onclick="selectT(this, 'apresentacao.html')" class="template-card bg-white p-3 rounded-2xl shadow-sm border-2">
+                        <div class="aspect-square bg-purple-50 rounded-xl mb-3 flex items-center justify-center text-4xl">🎬</div>
+                        <p class="text-[10px] font-black text-center uppercase tracking-wider">VSL Blindada</p>
+                    </div>
+                    <div onclick="selectT(this, 'oferta.html')" class="template-card bg-white p-3 rounded-2xl shadow-sm border-2">
+                        <div class="aspect-square bg-amber-50 rounded-xl mb-3 flex items-center justify-center text-4xl">🏷️</div>
+                        <p class="text-[10px] font-black text-center uppercase tracking-wider">Página Desconto</p>
+                    </div>
+                    <div onclick="selectT(this, 'verificar.html')" class="template-card bg-slate-900 p-3 rounded-2xl shadow-sm border-2">
+                        <div class="aspect-square bg-slate-800 rounded-xl mb-3 flex items-center justify-center text-4xl">🤖</div>
+                        <p class="text-[10px] font-black text-center uppercase tracking-wider text-blue-400">Recaptcha V5</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg

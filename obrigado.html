@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucesso! Bem-vindo ao ClickClone AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { -webkit-user-select: none; user-select: none; }
+        .bounce-custom { animation: bounce 2s infinite; }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(-5%); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+            50% { transform: translateY(0); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans min-h-screen flex items-center justify-center p-4">
+
+    <div class="max-w-xl w-full text-center bg-white p-10 md:p-16 rounded-[3rem] shadow-2xl border border-slate-100 relative overflow-hidden">
+        
+        <div class="w-24 h-24 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-8 text-5xl bounce-custom shadow-inner">
+            ✓
+        </div>
+        
+        <h1 class="text-3xl font-black text-slate-900 mb-4 tracking-tighter uppercase">Pagamento Confirmado!</h1>
+        <p class="text-slate-500 mb-10 leading-relaxed font-medium">
+            Sua assinatura do <b class="text-blue-600">Plano PRO</b> foi ativada com sucesso. <br>
+            A infraestrutura de blindagem já está liberada para você.
+        </p>
+
+        <div class="bg-blue-50 p-6 rounded-3xl mb-10 text-left border border-blue-100">
+            <h2 class="font-black text-blue-800 mb-2 italic uppercase text-xs tracking-widest">Próximo Passo Obrigatório:</h2>
+            <p class="text-sm text-blue-700 leading-relaxed">Clique no botão abaixo para acessar o painel e configurar seu primeiro link blindado. Use o e-mail cadastrado na compra.</p>
+        </div>
+
+        <a href="dashboard.html" class="block w-full bg-blue-600 text-white font-black py-6 rounded-2xl shadow-xl shadow-blue-200 hover:bg-blue-700 transition transform hover:scale-105 uppercase tracking-widest text-sm">
+            ACESSAR MEU PAINEL AGORA ➔
+        </a>
+
+        <div class="mt-10 pt-6 border-t border-slate-50">
+            <p class="text-[10px] text-slate-400 uppercase font-bold tracking-widest mb-2">
+                Suporte: clickcloneadm@gmail.com
+            </p>
+            <p class="text-[9px] text-slate-300 uppercase italic">
+                Aparecerá "CLICKCLONE AI" na sua fatura do cartão.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // 1. BLOQUEIO DE VOLTA (Impede que o usuário volte ao checkout vazio)
+        history.pushState(null, null, location.href);
+        window.onpopstate = function () { history.go(1); };
+
+        // 2. ANTICLONE
+        if (window.location.hostname !== "clickcloneai.com" && window.location.hostname !== "localhost") {
+            window.location.href = "https://clickcloneai.com";
+        }
+
+        // 3. BLOQUEIO DE BOTÃO DIREITO
+        document.addEventListener('contextmenu', event => event.preventDefault());
+    </script>
+</body>
+</html>
